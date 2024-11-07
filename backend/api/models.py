@@ -9,3 +9,13 @@ class Note(models.Model):
 
     def __str__(self):
         return self.title
+    
+class Pole(models.Model):
+    title = models.CharField(max_length=100)
+    def __str__(self):
+        return self.title
+
+
+class Employee(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    department = models.CharField(max_length=100)
