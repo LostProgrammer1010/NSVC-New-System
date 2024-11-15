@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from .models import Pole, Note, Employee
+from .models import Pole, Note, Rental
+import qrcode
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,7 +11,6 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
-        emp = Employee.objects.create(user=user, department="")
         return user
 
 class NoteSerializer(serializers.ModelSerializer):
@@ -23,9 +23,10 @@ class NoteSerializer(serializers.ModelSerializer):
 class PoleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pole
-        fields = ["id", "title"]
+        fields = ["id", "brand_name", "length", "material", "replacement_cost", "rental_cost", "renter", "qr_code"]
+        
 
-class EmployeeSerializer(serializers.ModelSerializer):
+class RentalSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Employee
-        fields = ["id", "department"]
+        model = Rental
+        fields = ["id", "pole", "renter", "return_date", "late_fee"]
