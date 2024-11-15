@@ -1,3 +1,5 @@
+
+"""
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from rest_framework import generics
@@ -28,3 +30,5 @@ class NoteDelete(generics.DestroyAPIView):
     def get_queryset(self):
         user = self.request.user
         return Note.objects.filter(author=user)
+
+"""

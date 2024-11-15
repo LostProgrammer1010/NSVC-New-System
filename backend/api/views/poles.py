@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
-from ..serializers import PoleSerializer
-from ..models import Pole
+from ..serializers.pole import PoleSerializer
+from ..models.poles import Pole
 from django.views import View
 from django.http import HttpResponse
 
@@ -26,12 +26,12 @@ class PoleListImage(generics.RetrieveAPIView):
     def get_queryset(self):
         return Pole.objects.all()
     
+
+    
 class GetImage(View):
     def get(self, request, *args, **kwargs):
         id = self.kwargs["id"]
-        print(id)
         pole = Pole.objects.filter(id=id)[0]
-        print(pole.qr_code)
         return HttpResponse(f"<img src='{pole.qr_code}'/>")
 
     
