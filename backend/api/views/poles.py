@@ -6,11 +6,10 @@ from django.views import View
 from django.http import HttpResponse
 
 
-
+# View for adding a pole to database
 class CreatePoleView(generics.CreateAPIView):
     serializer_class = PoleSerializer
     permission_classes = []
-
     def perform_create(self, serializer):
         if serializer.is_valid():
             serializer.save()
@@ -18,8 +17,15 @@ class CreatePoleView(generics.CreateAPIView):
             print(serializer.errors)
 
 
+# View to get a single pole by id
+class GetPoleView(generics.RetrieveAPIView):
+    serializer_class = PoleSerializer
+    permission_classes = []
 
-class PoleListImage(generics.RetrieveAPIView):
+    def get_queryset(self):
+        return Pole.objects.all()
+    
+class GetPoleListView(generics.ListAPIView):
     serializer_class = PoleSerializer
     permission_classes = []
 
@@ -27,12 +33,14 @@ class PoleListImage(generics.RetrieveAPIView):
         return Pole.objects.all()
     
 
-    
-class GetImage(View):
+# Get the QRCode for a certain pole
+class GetQRCodeImageView(View):
     def get(self, request, *args, **kwargs):
         id = self.kwargs["id"]
         pole = Pole.objects.filter(id=id)[0]
         return HttpResponse(f"<img src='{pole.qr_code}'/>")
+    
+
 
     
 

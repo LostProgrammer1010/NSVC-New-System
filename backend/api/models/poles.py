@@ -41,7 +41,7 @@ class Pole(models.Model):
 
 class Rental(models.Model):
     # Each pole should only be rented once but a user can rent multiple poles
-    pole = models.ForeignKey(Pole, on_delete=models.CASCADE, primary_key=True)
-    renter = models.ForeignKey(User, on_delete=models.CASCADE)
+    pole = models.OneToOneField(Pole, on_delete=models.CASCADE, primary_key=True)
+    renter = models.OneToOneField(User, on_delete=models.CASCADE)
     return_date = models.DateField(auto_now_add=True)
     late_fee = models.DecimalField(max_digits=5,decimal_places=2)
