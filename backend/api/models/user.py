@@ -11,4 +11,6 @@ class UserInformation(models.Model):
     parent_phone = models.CharField(max_length=30, default="")
     #pole_rental_agreement = models.ImageField(upload_to=)
     #vaulter_agreement = models.ImageField(upload_to=)
+
+    
     
