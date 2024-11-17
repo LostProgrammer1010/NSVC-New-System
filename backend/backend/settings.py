@@ -141,9 +141,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
-MEDIA_URL = "qr_codes/"
-
+MEDIA_URL = "api/pole/qr_codes/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'qr_codes')
 
 # Default primary key field type

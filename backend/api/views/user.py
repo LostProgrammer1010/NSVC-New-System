@@ -8,18 +8,18 @@ from rest_framework.permissions import AllowAny, IsAdminUser
 from django.http import HttpResponse
 
 class CreateUserView(generics.CreateAPIView):
-    queryset = UserInformation.objects.all
     serializer_class = UserInfoSerializer
     permission_classes = [AllowAny]
-
 
     def perform_create(self, serializer):
         req_dict = self.request.POST
         username = req_dict.get("user.username")
+        first_name = req_dict.get("user.first_name")
+        last_name = req_dict.get("user.last_name")
         password = req_dict.get("user.password")
         email = req_dict.get("user.email")
-        user = User.objects.create_user(username=username, password=password, email=email)
-        return UserInformation(user=user)
+        user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, password=password, email=email)
+        return serializer.save(user=user)
 
 
 
@@ -37,4 +37,5 @@ class GetUserView(generics.RetrieveAPIView):
 
     def get_queryset(self):
         return UserInformation.objects.all()
+    
     
