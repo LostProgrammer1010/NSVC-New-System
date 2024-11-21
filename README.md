@@ -73,9 +73,9 @@
 
 ### Built With
 
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Django][Django.py]][Django-url]
+[![React][React.js]][React-url]
+[![Vue][Vue.js]][Vue-url]
+[![Django][Django.py]][Django-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
