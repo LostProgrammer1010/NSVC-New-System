@@ -1,0 +1,8 @@
+/*#26835C, #51C1D5, #FFFBFD*/
+body {
+  background: linear-gradient(#26835C , #51C1D5 );
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  min-height: 100vh;
+  font-family: futura;
+}

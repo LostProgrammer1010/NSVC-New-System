@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import NavBar from "./components/NavBar"
 import ProtectedRoute from "./components/ProtectedRoute"
+import "./styles/App.css"
 
 function Logout() {
   localStorage.clear()
@@ -19,6 +20,7 @@ function RegisterAndLogout() {
 
 function App() {
   return (
+    <div class="app-container">
     <BrowserRouter>
      <NavBar/>
       <Routes>
@@ -34,6 +36,7 @@ function App() {
       
       </Routes>    
     </BrowserRouter>
+    </div>
   )
 }
 
