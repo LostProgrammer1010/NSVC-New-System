@@ -75,7 +75,7 @@
 
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
-* django
+* [![Django][Django.py]][Django-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -230,4 +230,6 @@ Project Link: [https://github.com/LostProgrammer1010/NSVC-New-System](https://gi
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
+[Django.py]: https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green
+[Django-url]: https://www.djangoproject.com/
 
