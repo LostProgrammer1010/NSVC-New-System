@@ -1,0 +1,37 @@
+.inventory {
+  overflow: scroll;
+  width: 80vw;
+  height: 70vh;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  
+}
+
+.pole-inventory {
+  min-width:100%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.pole-inventory th,
+.pole-inventory td {
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+
+.pole-inventory tbody tr:hover td {
+  background: rgba(255,255,255,0.5);
+  border-radius: 5px;
+}
+
+@media (max-width: 720px){
+  .inventory {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
+
+}

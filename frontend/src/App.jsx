@@ -5,6 +5,7 @@ import Register from "./pages/Register"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import NavBar from "./components/NavBar"
+import Poles from "./pages/Poles.jsx"
 import ProtectedRoute from "./components/ProtectedRoute"
 import "./styles/App.css"
 
@@ -21,6 +22,7 @@ function RegisterAndLogout() {
 function App() {
   return (
     <div class="app-container">
+    <link rel="icon" href="#"/>
     <BrowserRouter>
      <NavBar/>
       <Routes>
@@ -32,6 +34,7 @@ function App() {
         <Route path="/login" element={<Login />}/>
         <Route path="/logout" element={<Logout />}/>
         <Route path="/register" element={<RegisterAndLogout/>}/>
+        <Route path="/poles" element={<Poles/>}/>
         <Route path="*" element={<NotFound />}/>
       
       </Routes>    
