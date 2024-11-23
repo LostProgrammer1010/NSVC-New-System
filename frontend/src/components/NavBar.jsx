@@ -61,7 +61,6 @@ function NavBar() {
               <a href="/memberships" class="memeberships">Memberships</a>
               <a href="/" class="home">Home</a>
               <a href="/about" class="about">About</a>
-              <a href="/contact" class="contact">Contact</a>
             </div>
             <a href="/login" class="login-link">Login</a>
             </>

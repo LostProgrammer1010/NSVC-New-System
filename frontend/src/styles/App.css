@@ -2,12 +2,13 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
   background: linear-gradient(rgba(38,121,92,1), rgba(81,193,213, 0.75)),url("../assets/Group.jpeg") ;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 100vh;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
   font-family: futura;
 }

@@ -5,19 +5,19 @@
   background: rgba(255,255,255,0.2);
   border-radius: 20px;
   backdrop-filter: blur(8px);
-  
+  text-align: left;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 .pole-inventory {
   min-width:100%;
-  text-align: center;
-  margin: 20px auto;
 }
+
 
 .pole-inventory th,
 .pole-inventory td {
-  padding: 10px;
-  text-align: left;
+  padding: 15px;
   margin-bottom: 10px;
 }
 
@@ -29,9 +29,11 @@
 
 @media (max-width: 720px){
   .inventory {
+    box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
-    border-radius: 0px;
+    height: 70vh;
+    border-radius:20px;
+    backdrop-filter: blur(2px)
   }
 
 }
