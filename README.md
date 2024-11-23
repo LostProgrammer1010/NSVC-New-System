@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/LostProgrammer1010/NSVC-New-System">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./frontend/src/assets/NSVC_Logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">NSVC Website</h3>
@@ -65,7 +65,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="./images_readme/Screenshot.png"/>
+<img src="./images_readme/Screenshot1.png"/>
+<img src="./images_readme/Screenshot2.png"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
