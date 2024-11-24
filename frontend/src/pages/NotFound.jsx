@@ -1,7 +1,9 @@
+import "../styles/NotFound.css"
+
 function NotFound() {
     return <div>
         <h1>404 Not Found</h1>
-        <p>Page you are looking for does not exist</p>
+        <p>This page may not exist or is still under development</p>
     </div>
 }
 

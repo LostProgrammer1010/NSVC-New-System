@@ -1,33 +1,37 @@
-.page-container {
+.home-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   height: 100vh;
+  box-sizing: border-box;
 }
 
-.info-container {
+.home-page-container .info-container {
+  box-sizing: border-box;
   display: flex;
-  color: white;
-  background: rgba(255,255,255, 0.13);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.21);
+  backdrop-filter: blur(16px);
+  border: 2px solid rgba(255,255,255,0.21);
   box-shadow: 0 4px 30px rgba(0,0,0,0.1);
   flex-direction: column;
   padding: 20px;
-  width: 60%;
+  width: 70vw;
   height: auto;
   border-radius: 30px;
   align-items: center;
   justify-content: center;
-  margin: 50px;
+  font-family: dynapuff;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 150px;
 }
 
-.info-container .title {
+.home-page-container .info-container h1 {
   font-size: 40px;
+  font-weight: 400;
 }
 
-.info-container .content-container {
+.home-page-container .info-container .content-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,31 +40,33 @@
   padding: 20px;
 }
 
-.info-container .content-container .description {
-  letter-spacing: 0.5px;
-  font-weight: medium;
-  font-size: 16px;
+.home-page-container .info-container .content-container .description {
+  font-weight: 300;
+  font-family: roboto;
+  font-size: 18px;
   margin: 0px 20px 0px 0px;
 }
 
-.info-container .content-container img {
+.home-page-container .info-container .content-container img {
   width: 40%;
   height: auto;
   border-radius: 5px;
   min-width: 40%;
 }
 
-@media (max-width: 1080px) {
-  .info-container {
-    width: 80%;
+@media (max-width: 720px) {
+
+  .home-page-container .info-container{
+    width: 100vw;
   }
-  .info-container .content-container {
+
+  .home-page-container .info-container .content-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .info-container .content-container img {
+  .home-page-container .info-container .content-container img {
     order: -1;
     margin-bottom: 20px; 
     width: 70%;

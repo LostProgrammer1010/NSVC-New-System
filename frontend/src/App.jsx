@@ -6,7 +6,6 @@ import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import NavBar from "./components/NavBar"
 import Poles from "./pages/Poles.jsx"
-import Footer from "./components/Footer.jsx"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Pole from "./pages/Pole.jsx"
 import "./styles/App.css"
@@ -39,9 +38,7 @@ function App() {
         <Route path="/poles" element={<Poles/>}/>
         <Route path="/pole/:id" element={<Pole/>}/>
         <Route path="*" element={<NotFound />}/>
-      
       </Routes>    
-    <Footer/>
     </BrowserRouter>
     </div>
   )

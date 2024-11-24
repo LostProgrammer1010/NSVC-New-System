@@ -1,39 +1,55 @@
-.inventory {
+.poles-page-container .inventory {
   overflow: scroll;
-  width: 80vw;
-  height: 70vh;
-  background: rgba(255,255,255,0.2);
-  border-radius: 20px;
-  backdrop-filter: blur(8px);
-  text-align: left;
-  padding: 20px;
+  width: 70vw;
+  height: 80vh;
   margin-top: 20px;
+  padding: 20px;
+
+  background: rgba(255,255,255,0.0);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+
+  text-align: left;
+  font-family: roboto;
+  font-weight: 400;
+  color: white;
 }
 
-.pole-inventory {
+.poles-page-container .pole-table {
   min-width:100%;
 }
 
 
-.pole-inventory th,
-.pole-inventory td {
-  padding: 15px;
+.poles-page-container .pole-table th,
+.poles-page-container .pole-table td {
+  padding: 25px;
   margin-bottom: 10px;
 }
 
-
-.pole-inventory tbody tr:hover td {
+.inventory .pole-table tbody tr:hover td{
   background: rgba(255,255,255,0.5);
-  border-radius: 5px;
+  border-radius: 8px;
+
 }
 
+.inventory .pole-table tbody .true td{
+  border-radius: 5px;
+  background: rgba(253,0,0, 0.5);
+}
+
+.inventory .pole-table tbody .false td{
+  border-radius: 8px;
+  background: rgba(255,255,255, 0.05);
+}
+
+
+/*Responsive design */
 @media (max-width: 720px){
-  .inventory {
+  .poles-page-container .inventory{ 
     box-sizing: border-box;
     width: 100vw;
-    height: 70vh;
     border-radius:20px;
-    backdrop-filter: blur(2px)
   }
 
 }
