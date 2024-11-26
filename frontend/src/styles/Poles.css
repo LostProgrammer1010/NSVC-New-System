@@ -1,7 +1,9 @@
+
+
 .poles-page-container .inventory {
   overflow: scroll;
   width: 70vw;
-  height: 80vh;
+  height: 75vh;
   margin-top: 20px;
   padding: 20px;
 
@@ -43,6 +45,33 @@
   background: rgba(255,255,255, 0.05);
 }
 
+.color-convention {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  flex-direction: row;
+}
+
+.color-convention div {
+  display: flex;
+  padding: 15px 0px;
+}
+
+.color-convention .rented {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: red;
+  margin: 0px 5px;
+}
+
+.color-convention .not-rented {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid;
+  margin: 0px 5px;
+}
+
 
 /*Responsive design */
 @media (max-width: 720px){
@@ -50,6 +79,8 @@
     box-sizing: border-box;
     width: 100vw;
     border-radius:20px;
+    backdrop-filter: None;
+    border: None;
   }
 
 }

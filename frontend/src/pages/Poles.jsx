@@ -66,6 +66,10 @@ function Poles() {
         </table>
       </div>
     </div>
+    <div class="color-convention">
+      <div class="row-container"><div class="rented"></div>Rented</div>
+      <div class="row-container"><div class="not-rented"></div>Avaliable</div>
+    </div>
     <Footer/>
     </>
   )

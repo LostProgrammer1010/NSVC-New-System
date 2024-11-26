@@ -13,9 +13,8 @@
   border: 2px solid rgba(255,255,255,0.21);
   box-shadow: 0 4px 30px rgba(0,0,0,0.1);
   flex-direction: column;
-  padding: 20px;
   width: 70vw;
-  height: auto;
+  padding: 20px;
   border-radius: 30px;
   align-items: center;
   justify-content: center;
@@ -34,10 +33,8 @@
 .home-page-container .info-container .content-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 90%;
   height: auto;
-  padding: 20px;
 }
 
 .home-page-container .info-container .content-container .description {
@@ -45,19 +42,24 @@
   font-family: roboto;
   font-size: 18px;
   margin: 0px 20px 0px 0px;
+  text-align: left;
 }
 
 .home-page-container .info-container .content-container img {
-  width: 40%;
   height: auto;
   border-radius: 5px;
-  min-width: 40%;
+  max-height: 70%;
+  width: 50%;
+
 }
 
 @media (max-width: 720px) {
 
   .home-page-container .info-container{
+    background: None;
+    border: None;
     width: 100vw;
+    backdrop-filter: blur(0px);
   }
 
   .home-page-container .info-container .content-container {

@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar"
 import Poles from "./pages/Poles.jsx"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Pole from "./pages/Pole.jsx"
+import Staff from "./pages/Staff.jsx"
 import "./styles/App.css"
 
 function Logout() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/register" element={<RegisterAndLogout/>}/>
         <Route path="/poles" element={<Poles/>}/>
         <Route path="/pole/:id" element={<Pole/>}/>
+        <Route path="about" element={<Staff/>}/>
         <Route path="*" element={<NotFound />}/>
       </Routes>    
     </BrowserRouter>

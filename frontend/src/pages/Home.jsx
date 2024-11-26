@@ -2,6 +2,7 @@ import ProtectedRoute from "../components/ProtectedRoute"
 import "../styles/Home.css"
 import Footer from "../components/Footer.jsx"
 
+
 function Home() {
     return (
       <div class="home-page-container">
