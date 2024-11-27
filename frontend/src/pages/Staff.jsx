@@ -1,6 +1,7 @@
 import "../styles/Staff.css"
 import "../styles/Home.css"
-import crane from "../assets/Nate Crane.jpg"
+import crane_profile from "../assets/Nate Crane.jpg"
+import nick_profile from "../assets/Nick Jones.jpg"
 import Footer from "../components/Footer.jsx"
 
 
@@ -9,7 +10,7 @@ function Staff() {
 
     return (
         <>
-        <div class="home-page-container">
+        <div class="staff-page-container">
             <div class="info-container">
                 <h1 class="title">Alex Curran</h1>
                 <div class="content-container">
@@ -26,9 +27,17 @@ function Staff() {
                 <p class="description">
                     Pole Vault with a bend arm but preaches a straigh bottom arm
                 </p>
-                <img src={crane}/>
+                <img src={crane_profile}/>
             </div>
-            
+        </div>
+        <div class="info-container">
+                <h1 class="title">St. Nick</h1>
+                <div class="content-container">
+                <p class="description">
+                    ???
+                </p>
+                <img src={nick_profile}/> 
+            </div>
         </div>
        <Footer/>
       </div>

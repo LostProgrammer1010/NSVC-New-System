@@ -24,24 +24,24 @@ function RegisterAndLogout() {
 function App() {
   return (
     <div class="app-container">
-    <link rel="icon" href="#"/>
-    <BrowserRouter>
-     <NavBar/>
-      <Routes>
-        <Route
-        path="/"
-        element={
-            <Home />
-        }/>
-        <Route path="/login" element={<Login />}/>
-        <Route path="/logout" element={<Logout />}/>
-        <Route path="/register" element={<RegisterAndLogout/>}/>
-        <Route path="/poles" element={<Poles/>}/>
-        <Route path="/pole/:id" element={<Pole/>}/>
-        <Route path="about" element={<Staff/>}/>
-        <Route path="*" element={<NotFound />}/>
-      </Routes>    
-    </BrowserRouter>
+      <link rel="icon" href="#"/>
+      <BrowserRouter>
+      <NavBar/>
+        <Routes>
+          <Route
+          path="/"
+          element={
+              <Home />
+          }/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/logout" element={<Logout />}/>
+          <Route path="/register" element={<RegisterAndLogout/>}/>
+          <Route path="/poles" element={<Poles/>}/>
+          <Route path="/pole/:id" element={<Pole/>}/>
+          <Route path="about" element={<Staff/>}/>
+          <Route path="*" element={<NotFound />}/>
+        </Routes>    
+      </BrowserRouter>
     </div>
   )
 }

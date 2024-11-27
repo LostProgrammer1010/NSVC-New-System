@@ -1,20 +1,18 @@
+
+:root {
+  --primary-color: rgb(38,131,92);
+  --secondary-color: rgb(82,193,213);
+}
+
 /*#26835C, #51C1D5, #FFFBFD*/
 body {
+  overflow-x: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background: linear-gradient(rgba(38,121,92,1), rgba(81,193,213, 0.75)),url("../assets/Group.jpeg") ;
+  align-items: center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-  font-family: roboto;
-}
-
-
-@media (max-width: 720px) {
- 
-  
+  color: white;
 }

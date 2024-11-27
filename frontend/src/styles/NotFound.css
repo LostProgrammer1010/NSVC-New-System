@@ -1,4 +1,22 @@
-div {
+.not-found-page {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+}
+
+.not-found {
+  width: fit-content;
   text-align: center;
   color: white;
+  padding: 10px;
+  border-radius: 20px;
 }

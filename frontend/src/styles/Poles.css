@@ -1,16 +1,31 @@
+.poles-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+  width: 100vw;
+  height: 100vh;
+}
+
 
 
 .poles-page-container .inventory {
   overflow: scroll;
   width: 70vw;
-  height: 75vh;
-  margin-top: 20px;
+  height: 70vh;
+  margin-top: 80px;
   padding: 20px;
 
   background: rgba(255,255,255,0.0);
   border: 2px solid rgba(255,255,255,0.3);
   border-radius: 20px;
   backdrop-filter: blur(16px);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
 
   text-align: left;
   font-family: roboto;
@@ -48,6 +63,7 @@
 .color-convention {
   display: flex;
   justify-content: space-evenly;
+  width: 300px;
   align-items: center;
   padding: 10px;
   flex-direction: row;
