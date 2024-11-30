@@ -34,9 +34,9 @@ class Pole(models.Model):
         
         self.qr_code = f"/qr_codes/{self.serial}.png"
         # Will eventually need to be updated to actual url for website
-        qr = qrcode.make(f"http://localhost:8000/api/pole/{self.serial}") # link to the pole information with that serial number
+        qr = qrcode.make(f"http://localhost:3000/api/pole/{self.serial}") # link to the pole information with that serial number
         type(qr)
-        qr.save(f"{self.serial}.png")
+        qr.save(f"../backend/qr_codes/{self.serial}.png")
         super().save(*args, **kwargs)
 
 

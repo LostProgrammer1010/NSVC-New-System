@@ -38,7 +38,7 @@ function App() {
           <Route path="/register" element={<RegisterAndLogout/>}/>
           <Route path="/poles" element={<Poles/>}/>
           <Route path="/pole/:id" element={<Pole/>}/>
-          <Route path="about" element={<Staff/>}/>
+          <Route path="/staff" element={<Staff/>}/>
           <Route path="*" element={<NotFound />}/>
         </Routes>    
       </BrowserRouter>

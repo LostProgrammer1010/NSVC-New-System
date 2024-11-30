@@ -60,7 +60,7 @@ function NavBar() {
               <a href="/poles" class="poles">Poles</a>
               <a href="/memberships" class="memeberships">Memberships</a>
               <a href="/" class="home">Home</a>
-              <a href="/about" class="about">About</a>
+              <a href="/staff" class="staff">Staff</a>
             </div>
             <a href="/login" class="login-link">Login</a>
             </>
@@ -80,7 +80,7 @@ function NavBar() {
                 <a href="/login" class="login-link">Login</a>
                 <a href="/" class="home">Home</a>
                 <a href="/poles" class="poles">Poles</a>
-                <a href="/about" class="about">About</a>
+                <a href="/staff" class="staff">Staff</a>
                 <a href="/memberships" class="memeberships">Memberships</a>
                 </div>
               )}

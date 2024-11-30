@@ -1,7 +1,9 @@
-import React from 'react';
+import {React, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import "../styles/Pole.css";
-import qr from "../assets/278240.png"
+import DeletePoleWarning from '../components/DeletePoleWarning';
+import { faX } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const initialInventory = [
 { serial: 234831, brand: 'Pacer', length: "16'1", material: "Fiberglass", isRented: false},
@@ -25,19 +27,32 @@ const initialInventory = [
 ];
 
 function Pole() {
+
   const { id } = useParams();
+  const [deleteMessage, setdeleteMessage] = useState(false)
+
   var pole = new Object(); 
-  
   for (let i = 0; i < initialInventory.length; i++){
     if (initialInventory[i]["serial"] == id) {
       pole = initialInventory[i]
-      console.log(pole.serial);
     }
   }
 
+  function udpateMessage() {
+    setdeleteMessage(PreState => !PreState);
+  }
+
+
+
   return(
-    <div class="pole-page-container">
+    <div class="page" id='pole'>
+
+      {deleteMessage && (
+          <DeletePoleWarning route={`/pole/${id}/delete`} pole={pole} closeMessage={udpateMessage}/>
+      )}
+
       <div class="content">
+        <button onClick={udpateMessage}><FontAwesomeIcon icon={faX} size="1x" color='white'/></button>
         <h1> Pole Information </h1>
         <label>Serial Number: {id}</label>
         <label>Length: {pole.length}</label>
@@ -57,7 +72,7 @@ function Pole() {
         )}
 
       </div>
-    <img src={qr}/>
+    <img src="http://127.0.0.1:8000/api/pole/qr_codes/722047.png"/>
     </div>
   )
 }

@@ -1,5 +1,6 @@
-db.sqlite3
+
 .env
 __pycache__
 qr_codes/
 migrations/
+db.sqlite3

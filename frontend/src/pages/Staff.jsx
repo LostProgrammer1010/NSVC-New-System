@@ -1,5 +1,4 @@
 import "../styles/Staff.css"
-import "../styles/Home.css"
 import crane_profile from "../assets/Nate Crane.jpg"
 import nick_profile from "../assets/Nick Jones.jpg"
 import Footer from "../components/Footer.jsx"
@@ -9,8 +8,7 @@ function Staff() {
 
 
     return (
-        <>
-        <div class="staff-page-container">
+        <div class="page" id="staff">
             <div class="info-container">
                 <h1 class="title">Alex Curran</h1>
                 <div class="content-container">
@@ -41,7 +39,6 @@ function Staff() {
         </div>
        <Footer/>
       </div>
-      </>
     )
 }
 export default Staff;

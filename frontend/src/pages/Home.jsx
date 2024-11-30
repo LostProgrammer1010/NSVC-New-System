@@ -12,8 +12,7 @@ function Home() {
   }
 
     return (
-      <div class="home-page-container">
-
+      <div class="page" id="home">
         <video autoplay="true" muted="true" loop="true" id="myVideo">
           <source src={video} type="video/mp4"/>
         </video>

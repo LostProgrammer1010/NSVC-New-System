@@ -44,22 +44,26 @@ function Poles() {
 
   return (
     <>
-    <div class="poles-page-container">
+    <div class="page" id="poles">
       <div class="inventory">
+        
         <table class="pole-table">
           <thead>
+            <button class="button" >Add Pole</button>
+
             <tr >
               <th>Serial Number</th>
               <th>Brand</th>
               <th>Length</th>
+              
             </tr>
           </thead>
           <tbody>
             {inventory.map(item => (
-              <tr class={item.isRented.toString()} onClick={() => handleRowClick("/pole/"+item.serial)}>
+              <tr class={item.isRented.toString()} onClick={() => handleRowClick(`/pole/${item.serial}`)}>
                 <td>{item.serial}</td>
                 <td>{item.brand}</td>
-                <td>{item.length}</td>
+                <td >{item.length}</td>
               </tr>
             ))}
           </tbody>

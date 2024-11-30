@@ -1,14 +1,40 @@
-.pole-page-container {
+#pole {
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
   flex-direction: row;
   justify-content: center;
+
   width: 100vw;
+  height: 100vh;
+  
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
 }
 
-.pole-page-container .content {
+.content button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.content button:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+
+#pole .content {
   display: flex;
   flex-direction: column;
   width: 50vw;
+  height: fit-content;
   margin-top: 30px;
 
   background: rgba(0,0,0,0);
@@ -22,33 +48,35 @@
   color: white;
   font-family: roboto;
   font-weight: 400;
+  overflow: hidden;
 }
 
-.pole-page-container .content h1 {
+#pole .content h1 {
   font-weight: 800;
   letter-spacing: 1.5px;
 }
-.pole-page-container .content label {
+#pole .content label {
   letter-spacing: 1.2px;
   margin-bottom: 10px;
 }
 
-.pole-page-container img{
+#pole img{
   margin-left: 20px;
   border-radius: 20px;
   margin-top: 30px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  height: 500px;
 }
 
 @media (max-width: 720px) {
-  .pole-page-container {
+  #pole {
     flex-direction: column;
   }
-  .pole-page-container .content {
+  #pole .content {
     width: 100vw;
   }
 
-  .pole-page-container img {
+  #pole img {
     margin-left: 0px;
     width: 90vw;
     align-self: center;

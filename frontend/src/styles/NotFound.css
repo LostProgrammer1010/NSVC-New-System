@@ -1,4 +1,4 @@
-.not-found-page {
+#not-found {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -13,7 +13,7 @@
   background: linear-gradient(var(--primary-color), var(--secondary-color));
 }
 
-.not-found {
+#not-found .message{
   width: fit-content;
   text-align: center;
   color: white;
