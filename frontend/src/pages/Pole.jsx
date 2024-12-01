@@ -72,7 +72,7 @@ function Pole() {
         )}
 
       </div>
-    <img src="http://127.0.0.1:8000/api/pole/qr_codes/722047.png"/>
+    <img src="http://127.0.0.1:8000/api/pole/qr_codes/097735.png"/>
     </div>
   )
 }
