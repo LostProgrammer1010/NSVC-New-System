@@ -5,7 +5,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -89,14 +88,24 @@ Setup for the project is pretty simple. All you will need to do is clone the rep
 
 ### Prerequisites
 
+You will need to have python install on your computer and npm
+
 For the backend you will need to install all the python libraries that are being used
-* python
-```sh
-python3 pip install -r requirements.txt
-```
+1. Enter Backend
+  ```sh
+  cd NSVC-New-System/backend
+  ```
+2. Install python library from the requrements.txt file
+  ```sh
+  python3 pip install -r requirements.txt
+  ```
 
 For the frontend you will need to install all the react libraries that are being used for the project
-* npm
+1. Enter the frontend
+   ```sh
+   cd NSVC-New-System/frontend
+   ```
+2. Install all the javascript packages
   ```sh
   npm install
   ```
@@ -128,9 +137,6 @@ For the frontend you will need to install all the react libraries that are being
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,16 +173,7 @@ See the [open issues](https://github.com/LostProgrammer1010/NSVC-New-System/issu
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+This is a self driven project and will not allow for Contributions to main product. But feel free to take the code and do as you please with it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -229,8 +226,6 @@ Project Link: [https://github.com/LostProgrammer1010/NSVC-New-System](https://gi
 [product-screenshot]: images/screenshot.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
 [Django.py]: https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green
 [Django-url]: https://www.djangoproject.com/
 
