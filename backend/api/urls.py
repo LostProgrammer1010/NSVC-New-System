@@ -14,7 +14,7 @@ urlpatterns = [
     path("rentals/", GetRentalListView.as_view(), name="All Rentals"),
     path("rental/add", CreateRentalView.as_view(), name="Add Rental"),
     path("rental/<pk>", GetRentalView.as_view(), name="Retrive Rental"),
-    path("pole/<int:id>/delete", DeletePoleView.as_view(), name="Delete Pole"),
+    path("pole/delete/<int:id>", DeletePoleView.as_view(), name="Delete Pole"),
 
 
 ]
