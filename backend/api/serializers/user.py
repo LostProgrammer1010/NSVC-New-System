@@ -18,7 +18,7 @@ class UserInfoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UserInformation
-        fields = ["user", "phone_number", "under_18", "parent_name", "parent_phone", "parent_email"]
+        fields = '__all__'
 
         def create(self, validated_data):
             user_data = validated_data.pop('user')
