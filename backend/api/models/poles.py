@@ -27,7 +27,7 @@ def add_text_qr_code(path, pole_feet, pole_inches, pole_fex):
     image.save(path)
 
 def generate_qr_code(pole):
-    data = f"http://localhost:3000/api/pole/{pole.serial}"
+    data = f"http://localhost:3000/api/pole/{pole.id}"
     # Will eventually need to be updated to actual url for website
     qr = qrcode.QRCode(
         version=1,
@@ -37,29 +37,31 @@ def generate_qr_code(pole):
     )
     qr.add_data(data)
     qr.make(fit=True)
-    qr_image = qr.make_image(fill_color="black", back_color="white")
+    qr_image = qr.make_image(fill_color="black", back_color="white").convert("RGB")
     qr_width, qr_height = qr_image.size
 
+    print(type(qr_image))
+
     # Decrease width and increase the height
-    new_image = Image.new("RGB", (qr_width-50, qr_height+25), "white") 
+    background = Image.new('RGB', (qr_width-50, qr_height+25), (255,255,255)) 
+
 
     # Positions qr code with more space on bottom for text
-    new_image.paste(qr_image, (-25,-25)) 
-    new_image.save(f"../backend/qr_codes/{pole.serial}.png")
+    background.paste(qr_image, (-25, -25))
+    background.save(f"../backend/qr_codes/{pole.id}.png")
 
-    add_text_qr_code(f"../backend/qr_codes/{pole.serial}.png", pole.feet, pole.inches, pole.flex) # Will need to add flex to pole model
+    add_text_qr_code(f"../backend/qr_codes/{pole.id}.png", pole.feet, pole.inches, pole.flex)
 
 
 class Pole(models.Model):
-    serial = generate_serial()
-    id = models.CharField(max_length=6, default=serial ,primary_key=True)
-    brand_name = models.CharField(max_length=25)
+    id = models.CharField(max_length=6, default=generate_serial() ,primary_key=True)
+    brand_name = models.CharField(max_length=25, default="")
     feet = models.PositiveSmallIntegerField(default=0)
     inches = models.PositiveSmallIntegerField(default=0)
     flex = models.DecimalField(max_digits=4, default=0, decimal_places=2)
-    material = models.CharField(max_length=1, choices={'C' : "Carbon",'F' : "Fiberglass"})
-    replacement_cost = models.DecimalField(max_digits=7, decimal_places=2)
-    rental_cost = models.DecimalField(max_digits=5, decimal_places=2)
+    material = models.CharField(max_length=1, choices={'C' : "Carbon",'F' : "Fiberglass"}, default='C')
+    replacement_cost = models.DecimalField(max_digits=7, decimal_places=2, default=0)
+    rental_cost = models.DecimalField(max_digits=5, decimal_places=2, default=0)
     qr_code = models.CharField(max_length=100, default="", blank=True, null=False) # This gives the link to the url for qr_code
     isRented = models.BooleanField(default=False)
 
@@ -69,7 +71,7 @@ class Pole(models.Model):
         while(Pole.objects.filter(id=self.id)):
             self.id = generate_serial()
 
-        self.qr_code = f"/qr_codes/{self.serial}.png"
+        self.qr_code = f"/qr_codes/{self.id}.png"
         generate_qr_code(self)
         super().save(*args, **kwargs)
 

@@ -32,6 +32,16 @@ class GetPoleListView(generics.ListAPIView):
     def get_queryset(self):
         return Pole.objects.all()
     
+class DeletePoleView(generics.DestroyAPIView):
+    serializer_class = PoleSerializer
+    permission_classes = []
+
+    queryset = Pole.objects.all()
+    lookup_field = 'id'
+
+
+
+
 
 # Get the QRCode for a certain pole
 class GetQRCodeImageView(View):

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views.poles import CreatePoleView, GetPoleView, GetQRCodeImageView, GetPoleListView
+from .views.poles import CreatePoleView, GetPoleView, GetQRCodeImageView, GetPoleListView, DeletePoleView
 from .views.rental import CreateRentalView, GetRentalListView, GetRentalView
 
 
@@ -14,6 +14,7 @@ urlpatterns = [
     path("rentals/", GetRentalListView.as_view(), name="All Rentals"),
     path("rental/add", CreateRentalView.as_view(), name="Add Rental"),
     path("rental/<pk>", GetRentalView.as_view(), name="Retrive Rental"),
+    path("pole/<int:id>/delete", DeletePoleView.as_view(), name="Delete Pole"),
 
 
 ]
@@ -21,7 +22,7 @@ urlpatterns = [
 # To be added 
 
 # Pole Paths
-# path("pole/<pk>/delete, DeletePoleview.as_view(), name="Delete Pole"),
+
 # path("pole/<pk>/update, UpdatePoleView.as_view(), name="Update Pole"),
 
 # Rental Paths
