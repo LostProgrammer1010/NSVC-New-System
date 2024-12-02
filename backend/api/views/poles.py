@@ -55,12 +55,6 @@ class DeletePoleView(generics.DestroyAPIView):
         return Response(deleted_data, status=status.HTTP_200_OK)
 
     
-
-
-
-
-
-
 # Get the QRCode for a certain pole
 class GetQRCodeImageView(View):
     def get(self, request, *args, **kwargs):
