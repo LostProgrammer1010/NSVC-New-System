@@ -1,3 +1,4 @@
+import Footer from "../components/Footer"
 import "../styles/NotFound.css"
 
 function NotFound() {
@@ -7,6 +8,7 @@ function NotFound() {
             <h1>404 Not Found</h1>
             <p>This page may not exist or is still under development</p>
         </div>
+        <Footer/>
     </div>
     )
 }

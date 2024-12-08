@@ -6,11 +6,10 @@ function Footer() {
     <>
       <div class="footer-container">
         <a>© 2024 NSVC</a>
-        <a>Contact</a>
-        <a>About</a>
-        <a>Poles</a>
-        <a>Rental</a>
-        <a>link</a>
+        <a href="/contact" >Contact</a>
+        <a href="/staff">About</a>
+        <a href="/poles">Poles</a> 
+        <a href="/shop">Shop</a>
       </div>
     </>
   )

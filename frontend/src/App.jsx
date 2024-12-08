@@ -10,6 +10,7 @@ import ProtectedRoute from "./components/ProtectedRoute"
 import Pole from "./pages/Pole.jsx"
 import Staff from "./pages/Staff.jsx"
 import "./styles/App.css"
+import Footer from "./components/Footer.jsx"
 
 function Logout() {
   localStorage.clear()
